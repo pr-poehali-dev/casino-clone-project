@@ -61,12 +61,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				casino: {
+					red: '#dc2626',
+					gold: '#fbbf24',
+					darkgold: '#b45309',
+					dark: '#1a1a1a',
+					darker: '#111111',
+					gray: '#374151',
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontFamily: {
+				'casino': ['Cormorant', 'serif'],
+				'sans': ['Roboto', 'sans-serif'],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +96,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'pulse-gold': {
+					'0%, 100%': { 
+						boxShadow: '0 0 0 0 rgba(251, 191, 36, 0.7)'
+					},
+					'70%': {
+						boxShadow: '0 0 0 10px rgba(251, 191, 36, 0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'pulse-gold': 'pulse-gold 2s infinite',
 			}
 		}
 	},
